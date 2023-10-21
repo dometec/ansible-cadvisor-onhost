@@ -3,8 +3,8 @@
 cadvisor_user: cadvisor
 cadvisor_group: cadvisor
 cadvisor_port: 8572
-cadvisor_version: v0.24.1
 cadvisor_download_url: https://github.com/google/cadvisor/releases/download/{{ cadvisor_version }}/cadvisor
+cadvisor_version: v0.47.2
 
 cadvisor_install_path:         /opt/cadvisor
 cadvisor_config_path:          /etc/cadvisor
