@@ -15,8 +15,8 @@ galaxy_info:
               - trusty
         - name: Debian
           versions:
-              - jessie
-              - wheezy
+              - bullseye
+              - bookworm
         - name: EL
           versions:
               - 6
