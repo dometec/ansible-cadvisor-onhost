@@ -27,10 +27,10 @@
 
 - name: download cAdvisor
   get_url:
-    url: "{{ cadvisor_download_url }}"
+    url: "{{ cadvisor_base_download_url }}/cadvisor-{{ cadvisor_version }}-linux-{{ go_arch }}"
     dest: "{{ cadvisor_install_path }}/cadvisor"
     mode: 0755
-    
+
 - name: set permissions, owner and group
   file:
     path: "{{ cadvisor_install_path }}"
@@ -40,7 +40,7 @@
     mode: "go-w"
     recurse: yes
   changed_when: false
-  
+
 - name: copy systemd config
   template: src="../templates/cadvisor.service.j2"  dest="/lib/systemd/system/cadvisor.service"
   notify: restart cadvisor
